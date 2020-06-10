@@ -18,7 +18,8 @@ _NOTE: If you are using Ubuntu, `snapd` is installed by default._
 ### Install packages
 
 ```sh
-sudo snap install (package name)
+sudo snap install zephyr-crosstool-*
+sudo snap install zephyr-qemu
 ```
 
 ## Package List
