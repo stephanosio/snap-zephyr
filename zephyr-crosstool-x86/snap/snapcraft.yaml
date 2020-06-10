@@ -1,0 +1,108 @@
+name: zephyr-crosstool-x86
+version: '1.24.0.4'
+summary: Zephyr x86(-64) Cross Compiler Toolchain
+description: |
+  x86(-64) Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  x86-64-zephyr-elf-addr2line:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-addr2line
+    plugs: [ home ]
+  x86-64-zephyr-elf-ar:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-ar
+    plugs: [ home ]
+  x86-64-zephyr-elf-as:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-as
+    plugs: [ home ]
+  x86-64-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-c++
+    plugs: [ home ]
+  x86-64-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-c++filt
+    plugs: [ home ]
+  x86-64-zephyr-elf-cc:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-cc
+    plugs: [ home ]
+  x86-64-zephyr-elf-cpp:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-cpp
+    plugs: [ home ]
+  x86-64-zephyr-elf-elfedit:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-elfedit
+    plugs: [ home ]
+  x86-64-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-g++
+    plugs: [ home ]
+  x86-64-zephyr-elf-gcc:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc
+    plugs: [ home ]
+  x86-64-zephyr-elf-gcc-ar:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc-ar
+    plugs: [ home ]
+  x86-64-zephyr-elf-gcc-nm:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc-nm
+    plugs: [ home ]
+  x86-64-zephyr-elf-gcc-ranlib:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  x86-64-zephyr-elf-gcov:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcov
+    plugs: [ home ]
+  x86-64-zephyr-elf-gcov-dump:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcov-dump
+    plugs: [ home ]
+  x86-64-zephyr-elf-gcov-tool:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gcov-tool
+    plugs: [ home ]
+  x86-64-zephyr-elf-gdb:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gdb
+    plugs: [ home ]
+  x86-64-zephyr-elf-gdb-add-index:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  x86-64-zephyr-elf-gdb-add-index-py:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  x86-64-zephyr-elf-gdb-py:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gdb-py
+    plugs: [ home ]
+  x86-64-zephyr-elf-gprof:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-gprof
+    plugs: [ home ]
+  x86-64-zephyr-elf-ld:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-ld
+    plugs: [ home ]
+  x86-64-zephyr-elf-nm:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-nm
+    plugs: [ home ]
+  x86-64-zephyr-elf-objcopy:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-objcopy
+    plugs: [ home ]
+  x86-64-zephyr-elf-objdump:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-objdump
+    plugs: [ home ]
+  x86-64-zephyr-elf-ranlib:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-ranlib
+    plugs: [ home ]
+  x86-64-zephyr-elf-readelf:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-readelf
+    plugs: [ home ]
+  x86-64-zephyr-elf-size:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-size
+    plugs: [ home ]
+  x86-64-zephyr-elf-strings:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-strings
+    plugs: [ home ]
+  x86-64-zephyr-elf-strip:
+    command: x86_64-zephyr-elf/bin/x86_64-zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_x86_64-zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
