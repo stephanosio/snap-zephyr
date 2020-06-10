@@ -1,0 +1,108 @@
+name: zephyr-crosstool-riscv
+version: '1.24.0.4'
+summary: Zephyr RISC-V Cross Compiler Toolchain
+description: |
+  RISC-V Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  riscv64-zephyr-elf-addr2line:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-addr2line
+    plugs: [ home ]
+  riscv64-zephyr-elf-ar:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-ar
+    plugs: [ home ]
+  riscv64-zephyr-elf-as:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-as
+    plugs: [ home ]
+  riscv64-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-c++
+    plugs: [ home ]
+  riscv64-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-c++filt
+    plugs: [ home ]
+  riscv64-zephyr-elf-cc:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-cc
+    plugs: [ home ]
+  riscv64-zephyr-elf-cpp:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-cpp
+    plugs: [ home ]
+  riscv64-zephyr-elf-elfedit:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-elfedit
+    plugs: [ home ]
+  riscv64-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++
+    plugs: [ home ]
+  riscv64-zephyr-elf-gcc:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc
+    plugs: [ home ]
+  riscv64-zephyr-elf-gcc-ar:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc-ar
+    plugs: [ home ]
+  riscv64-zephyr-elf-gcc-nm:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc-nm
+    plugs: [ home ]
+  riscv64-zephyr-elf-gcc-ranlib:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  riscv64-zephyr-elf-gcov:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcov
+    plugs: [ home ]
+  riscv64-zephyr-elf-gcov-dump:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcov-dump
+    plugs: [ home ]
+  riscv64-zephyr-elf-gcov-tool:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcov-tool
+    plugs: [ home ]
+  riscv64-zephyr-elf-gdb:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb
+    plugs: [ home ]
+  riscv64-zephyr-elf-gdb-add-index:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  riscv64-zephyr-elf-gdb-add-index-py:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  riscv64-zephyr-elf-gdb-py:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb-py
+    plugs: [ home ]
+  riscv64-zephyr-elf-gprof:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gprof
+    plugs: [ home ]
+  riscv64-zephyr-elf-ld:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-ld
+    plugs: [ home ]
+  riscv64-zephyr-elf-nm:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-nm
+    plugs: [ home ]
+  riscv64-zephyr-elf-objcopy:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-objcopy
+    plugs: [ home ]
+  riscv64-zephyr-elf-objdump:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-objdump
+    plugs: [ home ]
+  riscv64-zephyr-elf-ranlib:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-ranlib
+    plugs: [ home ]
+  riscv64-zephyr-elf-readelf:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-readelf
+    plugs: [ home ]
+  riscv64-zephyr-elf-size:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-size
+    plugs: [ home ]
+  riscv64-zephyr-elf-strings:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-strings
+    plugs: [ home ]
+  riscv64-zephyr-elf-strip:
+    command: riscv64-zephyr-elf/bin/riscv64-zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_riscv64-zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
