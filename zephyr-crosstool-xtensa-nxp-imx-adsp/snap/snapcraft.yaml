@@ -1,0 +1,108 @@
+name: zephyr-crosstool-xtensa-nxp-imx-adsp
+version: '1.24.0.4'
+summary: Zephyr Xtensa NXP i.MX ADSP Cross Compiler Toolchain
+description: |
+  Xtensa NXP i.MX ADSP Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  xtensa-nxp-imx-adsp-zephyr-elf-addr2line:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-addr2line
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-ar:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-ar
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-as:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-as
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-c++
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-c++filt
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-cc:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-cc
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-cpp:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-cpp
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-elfedit:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-elfedit
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-g++
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gcc:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gcc
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gcc-ar:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gcc-ar
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gcc-nm:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gcc-nm
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gcc-ranlib:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gcov:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gcov
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gcov-dump:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gcov-dump
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gcov-tool:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gcov-tool
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gdb:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gdb
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gdb-add-index:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gdb-add-index-py:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gdb-py:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gdb-py
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-gprof:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-gprof
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-ld:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-ld
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-nm:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-nm
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-objcopy:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-objcopy
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-objdump:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-objdump
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-ranlib:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-ranlib
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-readelf:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-readelf
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-size:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-size
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-strings:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-strings
+    plugs: [ home ]
+  xtensa-nxp-imx-adsp-zephyr-elf-strip:
+    command: xtensa-nxp_imx_adsp_zephyr-elf/bin/xtensa-nxp_imx_adsp_zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_xtensa-nxp_imx_adsp_zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
