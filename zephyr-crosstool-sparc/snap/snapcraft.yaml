@@ -1,0 +1,108 @@
+name: zephyr-crosstool-sparc
+version: '1.24.0.4'
+summary: Zephyr SPARC Cross Compiler Toolchain
+description: |
+  SPARC Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  sparc-zephyr-elf-addr2line:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-addr2line
+    plugs: [ home ]
+  sparc-zephyr-elf-ar:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-ar
+    plugs: [ home ]
+  sparc-zephyr-elf-as:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-as
+    plugs: [ home ]
+  sparc-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-c++
+    plugs: [ home ]
+  sparc-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-c++filt
+    plugs: [ home ]
+  sparc-zephyr-elf-cc:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-cc
+    plugs: [ home ]
+  sparc-zephyr-elf-cpp:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-cpp
+    plugs: [ home ]
+  sparc-zephyr-elf-elfedit:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-elfedit
+    plugs: [ home ]
+  sparc-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-g++
+    plugs: [ home ]
+  sparc-zephyr-elf-gcc:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gcc
+    plugs: [ home ]
+  sparc-zephyr-elf-gcc-ar:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gcc-ar
+    plugs: [ home ]
+  sparc-zephyr-elf-gcc-nm:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gcc-nm
+    plugs: [ home ]
+  sparc-zephyr-elf-gcc-ranlib:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  sparc-zephyr-elf-gcov:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gcov
+    plugs: [ home ]
+  sparc-zephyr-elf-gcov-dump:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gcov-dump
+    plugs: [ home ]
+  sparc-zephyr-elf-gcov-tool:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gcov-tool
+    plugs: [ home ]
+  sparc-zephyr-elf-gdb:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gdb
+    plugs: [ home ]
+  sparc-zephyr-elf-gdb-add-index:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  sparc-zephyr-elf-gdb-add-index-py:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  sparc-zephyr-elf-gdb-py:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gdb-py
+    plugs: [ home ]
+  sparc-zephyr-elf-gprof:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-gprof
+    plugs: [ home ]
+  sparc-zephyr-elf-ld:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-ld
+    plugs: [ home ]
+  sparc-zephyr-elf-nm:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-nm
+    plugs: [ home ]
+  sparc-zephyr-elf-objcopy:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-objcopy
+    plugs: [ home ]
+  sparc-zephyr-elf-objdump:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-objdump
+    plugs: [ home ]
+  sparc-zephyr-elf-ranlib:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-ranlib
+    plugs: [ home ]
+  sparc-zephyr-elf-readelf:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-readelf
+    plugs: [ home ]
+  sparc-zephyr-elf-size:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-size
+    plugs: [ home ]
+  sparc-zephyr-elf-strings:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-strings
+    plugs: [ home ]
+  sparc-zephyr-elf-strip:
+    command: sparc-zephyr-elf/bin/sparc-zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_sparc-zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
