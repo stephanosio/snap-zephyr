@@ -1,0 +1,108 @@
+name: zephyr-crosstool-aarch64
+version: '1.24.0.4'
+summary: Zephyr ARM AArch64 Cross Compiler Toolchain
+description: |
+  ARM AArch64 Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  aarch64-zephyr-elf-addr2line:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-addr2line
+    plugs: [ home ]
+  aarch64-zephyr-elf-ar:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-ar
+    plugs: [ home ]
+  aarch64-zephyr-elf-as:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-as
+    plugs: [ home ]
+  aarch64-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-c++
+    plugs: [ home ]
+  aarch64-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-c++filt
+    plugs: [ home ]
+  aarch64-zephyr-elf-cc:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-cc
+    plugs: [ home ]
+  aarch64-zephyr-elf-cpp:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-cpp
+    plugs: [ home ]
+  aarch64-zephyr-elf-elfedit:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-elfedit
+    plugs: [ home ]
+  aarch64-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-g++
+    plugs: [ home ]
+  aarch64-zephyr-elf-gcc:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gcc
+    plugs: [ home ]
+  aarch64-zephyr-elf-gcc-ar:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gcc-ar
+    plugs: [ home ]
+  aarch64-zephyr-elf-gcc-nm:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gcc-nm
+    plugs: [ home ]
+  aarch64-zephyr-elf-gcc-ranlib:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  aarch64-zephyr-elf-gcov:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gcov
+    plugs: [ home ]
+  aarch64-zephyr-elf-gcov-dump:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gcov-dump
+    plugs: [ home ]
+  aarch64-zephyr-elf-gcov-tool:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gcov-tool
+    plugs: [ home ]
+  aarch64-zephyr-elf-gdb:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gdb
+    plugs: [ home ]
+  aarch64-zephyr-elf-gdb-add-index:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  aarch64-zephyr-elf-gdb-add-index-py:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  aarch64-zephyr-elf-gdb-py:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gdb-py
+    plugs: [ home ]
+  aarch64-zephyr-elf-gprof:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gprof
+    plugs: [ home ]
+  aarch64-zephyr-elf-ld:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-ld
+    plugs: [ home ]
+  aarch64-zephyr-elf-nm:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-nm
+    plugs: [ home ]
+  aarch64-zephyr-elf-objcopy:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-objcopy
+    plugs: [ home ]
+  aarch64-zephyr-elf-objdump:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-objdump
+    plugs: [ home ]
+  aarch64-zephyr-elf-ranlib:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-ranlib
+    plugs: [ home ]
+  aarch64-zephyr-elf-readelf:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-readelf
+    plugs: [ home ]
+  aarch64-zephyr-elf-size:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-size
+    plugs: [ home ]
+  aarch64-zephyr-elf-strings:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-strings
+    plugs: [ home ]
+  aarch64-zephyr-elf-strip:
+    command: aarch64-zephyr-elf/bin/aarch64-zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_aarch64-zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
