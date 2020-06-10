@@ -1,0 +1,108 @@
+name: zephyr-crosstool-xtensa-intel-byt-adsp
+version: '1.24.0.4'
+summary: Zephyr Xtensa Intel BYT ADSP Cross Compiler Toolchain
+description: |
+  Xtensa Intel BYT ADSP Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  xtensa-intel-byt-adsp-zephyr-elf-addr2line:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-addr2line
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-ar:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-ar
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-as:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-as
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-c++
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-c++filt
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-cc:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-cc
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-cpp:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-cpp
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-elfedit:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-elfedit
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-g++
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gcc:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gcc
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gcc-ar:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gcc-ar
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gcc-nm:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gcc-nm
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gcc-ranlib:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gcov:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gcov
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gcov-dump:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gcov-dump
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gcov-tool:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gcov-tool
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gdb:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gdb
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gdb-add-index:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gdb-add-index-py:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gdb-py:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gdb-py
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-gprof:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-gprof
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-ld:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-ld
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-nm:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-nm
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-objcopy:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-objcopy
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-objdump:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-objdump
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-ranlib:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-ranlib
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-readelf:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-readelf
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-size:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-size
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-strings:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-strings
+    plugs: [ home ]
+  xtensa-intel-byt-adsp-zephyr-elf-strip:
+    command: xtensa-intel_byt_adsp_zephyr-elf/bin/xtensa-intel_byt_adsp_zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_xtensa-intel_byt_adsp_zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
