@@ -1,0 +1,108 @@
+name: zephyr-crosstool-arc
+version: '1.24.0.4'
+summary: Zephyr ARC Cross Compiler Toolchain
+description: |
+  ARC Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  arc-zephyr-elf-addr2line:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-addr2line
+    plugs: [ home ]
+  arc-zephyr-elf-ar:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-ar
+    plugs: [ home ]
+  arc-zephyr-elf-as:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-as
+    plugs: [ home ]
+  arc-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-c++
+    plugs: [ home ]
+  arc-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-c++filt
+    plugs: [ home ]
+  arc-zephyr-elf-cc:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-cc
+    plugs: [ home ]
+  arc-zephyr-elf-cpp:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-cpp
+    plugs: [ home ]
+  arc-zephyr-elf-elfedit:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-elfedit
+    plugs: [ home ]
+  arc-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-g++
+    plugs: [ home ]
+  arc-zephyr-elf-gcc:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gcc
+    plugs: [ home ]
+  arc-zephyr-elf-gcc-ar:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gcc-ar
+    plugs: [ home ]
+  arc-zephyr-elf-gcc-nm:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gcc-nm
+    plugs: [ home ]
+  arc-zephyr-elf-gcc-ranlib:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  arc-zephyr-elf-gcov:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gcov
+    plugs: [ home ]
+  arc-zephyr-elf-gcov-dump:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gcov-dump
+    plugs: [ home ]
+  arc-zephyr-elf-gcov-tool:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gcov-tool
+    plugs: [ home ]
+  arc-zephyr-elf-gdb:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gdb
+    plugs: [ home ]
+  arc-zephyr-elf-gdb-add-index:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  arc-zephyr-elf-gdb-add-index-py:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  arc-zephyr-elf-gdb-py:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gdb-py
+    plugs: [ home ]
+  arc-zephyr-elf-gprof:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-gprof
+    plugs: [ home ]
+  arc-zephyr-elf-ld:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-ld
+    plugs: [ home ]
+  arc-zephyr-elf-nm:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-nm
+    plugs: [ home ]
+  arc-zephyr-elf-objcopy:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-objcopy
+    plugs: [ home ]
+  arc-zephyr-elf-objdump:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-objdump
+    plugs: [ home ]
+  arc-zephyr-elf-ranlib:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-ranlib
+    plugs: [ home ]
+  arc-zephyr-elf-readelf:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-readelf
+    plugs: [ home ]
+  arc-zephyr-elf-size:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-size
+    plugs: [ home ]
+  arc-zephyr-elf-strings:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-strings
+    plugs: [ home ]
+  arc-zephyr-elf-strip:
+    command: arc-zephyr-elf/bin/arc-zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_arc-zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
