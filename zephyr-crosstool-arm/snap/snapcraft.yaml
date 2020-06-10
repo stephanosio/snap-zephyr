@@ -1,0 +1,108 @@
+name: zephyr-crosstool-arm
+version: '1.24.0.4'
+summary: Zephyr ARM AArch32 (Cortex-A/R/M) Cross Compiler Toolchain
+description: |
+  ARM AArch32 (Cortex-A/R/M) Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  arm-zephyr-eabi-addr2line:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-addr2line
+    plugs: [ home ]
+  arm-zephyr-eabi-ar:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-ar
+    plugs: [ home ]
+  arm-zephyr-eabi-as:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-as
+    plugs: [ home ]
+  arm-zephyr-eabi-cxx: # FIXME: s/cxx/c++/
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-c++
+    plugs: [ home ]
+  arm-zephyr-eabi-cxxfilt: # FIXME: s/cxx/c++/
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-c++filt
+    plugs: [ home ]
+  arm-zephyr-eabi-cc:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-cc
+    plugs: [ home ]
+  arm-zephyr-eabi-cpp:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-cpp
+    plugs: [ home ]
+  arm-zephyr-eabi-elfedit:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-elfedit
+    plugs: [ home ]
+  arm-zephyr-eabi-gxx: # FIXME: s/gxx/g++/
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-g++
+    plugs: [ home ]
+  arm-zephyr-eabi-gcc:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
+    plugs: [ home ]
+  arm-zephyr-eabi-gcc-ar:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar
+    plugs: [ home ]
+  arm-zephyr-eabi-gcc-nm:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-nm
+    plugs: [ home ]
+  arm-zephyr-eabi-gcc-ranlib:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib
+    plugs: [ home ]
+  arm-zephyr-eabi-gcov:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gcov
+    plugs: [ home ]
+  arm-zephyr-eabi-gcov-dump:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gcov-dump
+    plugs: [ home ]
+  arm-zephyr-eabi-gcov-tool:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gcov-tool
+    plugs: [ home ]
+  arm-zephyr-eabi-gdb:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+    plugs: [ home ]
+  arm-zephyr-eabi-gdb-add-index:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb-add-index
+    plugs: [ home ]
+  arm-zephyr-eabi-gdb-add-index-py:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb-add-index-py
+    plugs: [ home ]
+  arm-zephyr-eabi-gdb-py:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb-py
+    plugs: [ home ]
+  arm-zephyr-eabi-gprof:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-gprof
+    plugs: [ home ]
+  arm-zephyr-eabi-ld:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-ld
+    plugs: [ home ]
+  arm-zephyr-eabi-nm:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-nm
+    plugs: [ home ]
+  arm-zephyr-eabi-objcopy:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-objcopy
+    plugs: [ home ]
+  arm-zephyr-eabi-objdump:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump
+    plugs: [ home ]
+  arm-zephyr-eabi-ranlib:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib
+    plugs: [ home ]
+  arm-zephyr-eabi-readelf:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-readelf
+    plugs: [ home ]
+  arm-zephyr-eabi-size:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-size
+    plugs: [ home ]
+  arm-zephyr-eabi-strings:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-strings
+    plugs: [ home ]
+  arm-zephyr-eabi-strip:
+    command: arm-zephyr-eabi/bin/arm-zephyr-eabi-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_arm-zephyr-eabi.tar.gz
+    stage-packages:
+      - libpython3.6
