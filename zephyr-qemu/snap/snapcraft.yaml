@@ -1,0 +1,54 @@
+name: zephyr-qemu
+version: '5.0.0.1'
+summary: Zephyr QEMU Target Platform Emulator
+description: |
+  QEMU Target Platform Emulator for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  zephyr-qemu-system-aarch64:
+    command: bin/zephyr-qemu-system-aarch64
+    plugs: [ home ]
+  zephyr-qemu-system-arc:
+    command: bin/zephyr-qemu-system-arc
+    plugs: [ home ]
+  zephyr-qemu-system-arm:
+    command: bin/zephyr-qemu-system-arm
+    plugs: [ home ]
+  zephyr-qemu-system-i386:
+    command: bin/zephyr-qemu-system-i386
+    plugs: [ home ]
+  zephyr-qemu-system-nios2:
+    command: bin/zephyr-qemu-system-nios2
+    plugs: [ home ]
+  zephyr-qemu-system-riscv32:
+    command: bin/zephyr-qemu-system-riscv32
+    plugs: [ home ]
+  zephyr-qemu-system-riscv64:
+    command: bin/zephyr-qemu-system-riscv64
+    plugs: [ home ]
+  zephyr-qemu-system-sparc:
+    command: bin/zephyr-qemu-system-sparc
+    plugs: [ home ]
+  zephyr-qemu-system-x86-64: # FIXME: Should be 'zephyr-qemu-system-x86_64'
+    command: bin/zephyr-qemu-system-x86_64
+    plugs: [ home ]
+  zephyr-qemu-system-xtensa:
+    command: bin/zephyr-qemu-system-xtensa
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-qemu/releases/download/zephyr-qemu-v5.0.0.1/zephyr-qemu-v5.0.0.1_linux-x86_64.tar.gz
+    stage-packages:
+      - libpixman-1-0
+    override-prime: |
+      snapcraftctl prime
+
+      # Get rid of unnecessary ROM images that are automatically flagged as
+      # security risks by the Snap package verifier
+      rm share/qemu/openbios-ppc
