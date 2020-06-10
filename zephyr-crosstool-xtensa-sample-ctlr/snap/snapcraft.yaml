@@ -1,0 +1,108 @@
+name: zephyr-crosstool-xtensa-sample-ctlr
+version: '1.24.0.4'
+summary: Zephyr Xtensa Sample Controller Cross Compiler Toolchain
+description: |
+  Xtensa Sample Controller Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  xtensa-sample-controller-zephyr-elf-addr2line:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-addr2line
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-ar:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-ar
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-as:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-as
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-c++
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-c++filt
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-cc:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-cc
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-cpp:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-cpp
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-elfedit:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-elfedit
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-g++
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gcc:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gcc
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gcc-ar:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gcc-ar
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gcc-nm:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gcc-nm
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gcc-ranlib:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gcov:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gcov
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gcov-dump:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gcov-dump
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gcov-tool:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gcov-tool
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gdb:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gdb
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gdb-add-index:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gdb-add-index-py:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gdb-py:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gdb-py
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-gprof:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-gprof
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-ld:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-ld
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-nm:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-nm
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-objcopy:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-objcopy
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-objdump:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-objdump
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-ranlib:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-ranlib
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-readelf:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-readelf
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-size:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-size
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-strings:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-strings
+    plugs: [ home ]
+  xtensa-sample-controller-zephyr-elf-strip:
+    command: xtensa-sample_controller_zephyr-elf/bin/xtensa-sample_controller_zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_xtensa-sample_controller_zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
