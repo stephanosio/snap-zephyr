@@ -1,0 +1,108 @@
+name: zephyr-crosstool-nios2
+version: '1.24.0.4'
+summary: Zephyr NIOS2 Cross Compiler Toolchain
+description: |
+  NIOS2 Cross Compiler Toolchain for Zephyr RTOS Development
+
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  nios2-zephyr-elf-addr2line:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-addr2line
+    plugs: [ home ]
+  nios2-zephyr-elf-ar:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-ar
+    plugs: [ home ]
+  nios2-zephyr-elf-as:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-as
+    plugs: [ home ]
+  nios2-zephyr-elf-cxx: # FIXME: s/cxx/c++/
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-c++
+    plugs: [ home ]
+  nios2-zephyr-elf-cxxfilt: # FIXME: s/cxx/c++/
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-c++filt
+    plugs: [ home ]
+  nios2-zephyr-elf-cc:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-cc
+    plugs: [ home ]
+  nios2-zephyr-elf-cpp:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-cpp
+    plugs: [ home ]
+  nios2-zephyr-elf-elfedit:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-elfedit
+    plugs: [ home ]
+  nios2-zephyr-elf-gxx: # FIXME: s/gxx/g++/
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-g++
+    plugs: [ home ]
+  nios2-zephyr-elf-gcc:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gcc
+    plugs: [ home ]
+  nios2-zephyr-elf-gcc-ar:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gcc-ar
+    plugs: [ home ]
+  nios2-zephyr-elf-gcc-nm:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gcc-nm
+    plugs: [ home ]
+  nios2-zephyr-elf-gcc-ranlib:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gcc-ranlib
+    plugs: [ home ]
+  nios2-zephyr-elf-gcov:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gcov
+    plugs: [ home ]
+  nios2-zephyr-elf-gcov-dump:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gcov-dump
+    plugs: [ home ]
+  nios2-zephyr-elf-gcov-tool:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gcov-tool
+    plugs: [ home ]
+  nios2-zephyr-elf-gdb:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gdb
+    plugs: [ home ]
+  nios2-zephyr-elf-gdb-add-index:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gdb-add-index
+    plugs: [ home ]
+  nios2-zephyr-elf-gdb-add-index-py:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gdb-add-index-py
+    plugs: [ home ]
+  nios2-zephyr-elf-gdb-py:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gdb-py
+    plugs: [ home ]
+  nios2-zephyr-elf-gprof:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-gprof
+    plugs: [ home ]
+  nios2-zephyr-elf-ld:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-ld
+    plugs: [ home ]
+  nios2-zephyr-elf-nm:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-nm
+    plugs: [ home ]
+  nios2-zephyr-elf-objcopy:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-objcopy
+    plugs: [ home ]
+  nios2-zephyr-elf-objdump:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-objdump
+    plugs: [ home ]
+  nios2-zephyr-elf-ranlib:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-ranlib
+    plugs: [ home ]
+  nios2-zephyr-elf-readelf:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-readelf
+    plugs: [ home ]
+  nios2-zephyr-elf-size:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-size
+    plugs: [ home ]
+  nios2-zephyr-elf-strings:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-strings
+    plugs: [ home ]
+  nios2-zephyr-elf-strip:
+    command: nios2-zephyr-elf/bin/nios2-zephyr-elf-strip
+    plugs: [ home ]
+
+parts:
+  tarball:
+    plugin: dump
+    source: https://github.com/stephanosio/zephyr-crosstool-ng/releases/download/zephyr-crosstool-ng-1.24.0.4/zephyr-crosstool-ng-1.24.0.4_linux-x86_64_nios2-zephyr-elf.tar.gz
+    stage-packages:
+      - libpython3.6
